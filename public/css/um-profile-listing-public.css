@@ -1,0 +1,116 @@
+.um_profile_listing_main{
+    width: 100%;
+    max-width: 100% !important;
+}
+.um_profile_listing_main .um_ajax_form {
+    display: block;
+}
+.um_profile_listing_main .um_profile_li_form .gap-row{
+    gap:2em;
+}
+.um_profile_listing_main input#inputexperience {
+    width: 72%;
+}
+.um_profile_listing_main form#um_profile_li_form {
+    border: 1px solid #c4c4c4;
+    padding: 2em 1em;
+    border-radius: 5px;
+    margin: 2em 0;
+    width: fit-content;
+}
+.um_search_btn_wrap {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 2em 1em;
+}
+.star-rating {
+    display: inline-block;
+    font-size: 0; /* Remove white space between inline-block elements */
+}
+.star-rating input {
+    display: none; /* Hide the radio inputs */
+}
+.star-rating label {
+    display: inline-block;
+    cursor: pointer;
+    width: 26px; /* Adjust the size of the star */
+    height: 26px;
+    margin: 0;
+    padding: 0;
+}
+.star-rating label::before {
+    content: '\2605'; /* Unicode character for a solid star */
+    font-size: 24px; /* Adjust the size of the star */
+    color: #ccc; /* Default star color */
+    transition: color 0.2s ease-in-out;
+}
+/* Customize the appearance of the stars based on the rating value */
+.star-rating[data-rating="1"] label:nth-child(1),
+.star-rating[data-rating="2"] label:nth-child(-n+2),
+.star-rating[data-rating="3"] label:nth-child(-n+3),
+.star-rating[data-rating="4"] label:nth-child(-n+4),
+.star-rating[data-rating="5"] label {
+    /* Apply styles to highlight selected stars based on the rating */
+    color: yellow; /* Change the color as desired */
+}
+.star-rating label {
+    display: inline-block;
+    cursor: pointer;
+    width: 26px; /* Adjust the size of the star */
+    height: 26px;
+    margin: 0;
+    padding: 0;
+    color: #ccc; /* Default star color */
+    transition: color 0.2s ease-in-out;
+}
+.star-rating label.filled,
+.star-rating label:hover {
+    color: yellow; /* Change the color as desired */
+}
+label.filled:before {
+    color: rgb(243, 255, 68);
+}
+form#um_profile_li_form .form-row .form-group>label {
+    width: 90px;
+}
+form#um_profile_li_form span.select2.select2-container{
+    width: 72% !important;
+}
+form#um_profile_li_form input#inputage {
+    width: 66%;
+}
+form#um_profile_li_form .star-rating {
+    display: flex;
+    gap: 8px;
+}
+form#um_profile_li_form .um_search_btn_wrap button.btn.btn-primary.um_filter_btn {
+    width: 100px;
+}
+form#um_profile_li_form .um_search_btn_wrap {
+    display: flex;
+    justify-content: center;
+}
+/* ajax-loader css */
+.ajax-loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid blue;
+    border-right: 16px solid green;
+    border-bottom: 16px solid red;
+    border-left: 16px solid pink;
+    width: 50px;
+    height: 50px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

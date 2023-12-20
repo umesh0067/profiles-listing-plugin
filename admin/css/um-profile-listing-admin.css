@@ -1,0 +1,24 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+ div#profile_metadata .inside {
+    display: flex;
+    flex-direction: column;
+ }
+
+ div#profile_metadata .inside .um_meta_item {
+    display: flex;
+    margin: 10px 0;
+    align-items: center;
+}
+ div#profile_metadata .inside .um_meta_item label {
+    width: 20%;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+div#profile_metadata .inside .um_meta_item .meta-field {
+    font-size: 15px;
+    width: 70%;
+}
