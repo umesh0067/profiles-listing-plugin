@@ -176,6 +176,7 @@ class Um_Profile_Listing {
 
 		// action hook for ajax
 		$this->loader->add_action( 'wp_ajax_profile_search', $plugin_public, 'handle_ajax_request' );
+		$this->loader->add_action( 'wp_ajax_nopriv_profile_search', $plugin_public, 'handle_ajax_request' );
 
 	}
 
