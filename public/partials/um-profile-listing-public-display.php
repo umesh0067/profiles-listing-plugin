@@ -103,7 +103,7 @@ $args = array(
                         <label for="no_of_jobs_completed">No of jobs completed</label>
                         <input type="number" class="form-control" id="inputnojobs" placeholder="">
                     </div>
-                    <div class="form-group gap-row mb-5 col-md-6 d-inline-flex align-items-center">
+                    <div class="form-group gap-row col-md-6 d-inline-flex align-items-center">
                         <label for="yearofexperience">Years of experience</label>
                         <input type="number" class="form-control" id="inputexperience" placeholder="">
                     </div>
