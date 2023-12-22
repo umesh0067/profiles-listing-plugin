@@ -204,7 +204,7 @@ class Um_Profile_Listing_Public {
 		add_meta_box(
 			'profile_metadata',
 			'Profile Data',
-			'render_profile_metadata_fields',
+			array($this, 'render_profile_metadata_fields'),
 			'profile_listing',
 			'normal',
 			'high'
