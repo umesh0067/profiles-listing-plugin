@@ -174,14 +174,6 @@ class Um_Profile_Listing {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
-		//register custom post type and texonomy 
-		$this->loader->add_action( 'init', $plugin_public, 'create_profile_listing_post_type');
-		$this->loader->add_action( 'init', $plugin_public, 'create_profile_taxonomies');
-
-		// add metadata and save metadata
-		$this->loader->add_action( 'add_meta_boxes', $plugin_public, 'add_profile_listing_metadata' );
-		$this->loader->add_action( 'save_post', $plugin_public, 'save_profile_listing_metadata' );
-
 		// action hook for ajax
 		$this->loader->add_action( 'wp_ajax_profile_search', $plugin_public, 'handle_ajax_request' );
 		$this->loader->add_action( 'wp_ajax_nopriv_profile_search', $plugin_public, 'handle_ajax_request' );
