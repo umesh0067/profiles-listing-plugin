@@ -45,6 +45,7 @@ define( 'UM_PROFILE_LIST_PATH', plugin_dir_path(__FILE__) );
 
 function activate_um_profile_listing() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-um-profile-listing-activator.php';
+    Um_Profile_Listing_Activator::activate();
 }
 
 /**
@@ -56,7 +57,7 @@ function deactivate_um_profile_listing() {
 	Um_Profile_Listing_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'create_profile_listing_post_type' );
+register_activation_hook( __FILE__, 'activate_um_profile_listing' );
 register_deactivation_hook( __FILE__, 'deactivate_um_profile_listing' );
 
 
@@ -82,3 +83,4 @@ function run_um_profile_listing() {
 
 }
 run_um_profile_listing();
+

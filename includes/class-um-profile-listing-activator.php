@@ -20,4 +20,5 @@ class Um_Profile_Listing_Activator {
 
 	}
 
+
 }
