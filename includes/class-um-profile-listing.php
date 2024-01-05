@@ -155,8 +155,22 @@ class Um_Profile_Listing {
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 
+		//$plugin_admin2 = Um_Profile_Listing_Activator::activate();
+
+
 		// action hook for menu admin menu
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'um_profile_listing_menu' );
+
+		// Hook into the 'init' action
+		$this->loader->add_action( 'init', $plugin_admin, 'create_profile_listing_post_type');
+
+		// Hook into the 'init' action
+		$this->loader->add_action( 'init', $plugin_admin, 'create_profile_taxonomies');
+
+		$this->loader->add_action( 'add_meta_boxes', $plugin_admin, 'add_profile_listing_metadata' );
+
+
+		$this->loader->add_action( 'save_post', $plugin_admin, 'save_profile_listing_metadata' );
 
 	}
 
